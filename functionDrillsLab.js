@@ -206,7 +206,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+function printAllNames(array) {
+  for (i = 0; i < namesArr.length; i++){
+    console.log(namesArr[i])
+  }
+}
+printAllNames(namesArr);
 
 
 ////////////////// PROBLEM 13 ////////////////////
@@ -217,7 +222,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+function thatsOdd(num) {
+  if(num % 2 === 0){
+    return("That's not odd! Nothing unusual here");
+  }else {
+    return("How odd! I'm beginning to think there's something going on here");
+  }
+}
+let oddChecker = thatsOdd(5)
+console.log(oddChecker);
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -230,7 +243,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+const bestMovie = (title) => {return(String(title) + " is the best movie ever!")}
+bestMovie("Spiderman")
+
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -244,7 +259,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
-//CODE HERE
+function bigOrSmall (arr) {
+  let answers = []
+  for (i = 0; i < bigOrSmallArray.length; i++){
+    if (bigOrSmallArray[i] > 100){
+      answers.push("BIG")
+    } else {
+      answers.push("small")
+    }
+  }
+   let arrayEvaluator = answers
+  return arrayEvaluator
+}
+ console.log(bigOrSmall(bigOrSmallArray))
+
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -255,7 +283,15 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-//CODE HERE
+function theEliminator(arrStr, loserStr){
+  for(let i = 0; i < arrStr.length; i++){
+    if (loserStr === arrStr[i]) {
+      arrStr.splice(i, 1);
+    }
+  }
+  return arrStr
+}
+console.log(theEliminator(contestants, loser))
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -265,7 +301,11 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
+function allCaps (str) {
+console.log (str.toUpperCase())
+
+}
+allCaps(sampleString)
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -279,13 +319,24 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(email){
+ String(email) 
+ if (email.includes("@")){
+   console.log("Email verified")
+ }else {
+   console.log("must provide a valid email address")
+ }
+}
+
+emailCheck("cp@email.com")
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
-//CODE HERE
+
 
 
 ////////////////// PROBLEM 20 ////////////////////
