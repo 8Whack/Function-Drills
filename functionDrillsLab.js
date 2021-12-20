@@ -11,7 +11,11 @@
   Call the function.
 */
 
-//CODE HERE
+function helloWorld() {
+  console.log("Hello World!")
+}
+helloWorld();
+
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -20,8 +24,9 @@
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
-
+const jsNinja = () => {
+  console.log("I am a JavaScript ninja!")
+}
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -30,8 +35,10 @@
   Call the function, passing in an argument.
 */
 
-//CODE HERE
-
+function printName(name) {
+ console.log(name)
+}
+printName("Calvin")
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -44,8 +51,11 @@
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+function greeting(name) {
+  console.log("Hello, ", String(name));
+};
 
+greeting("Calvin");
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -58,7 +68,18 @@
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
+const compareNums = (num1, num2) => {
+  if (num1 > num2){
+    return (num1);
+  } else if (num1 < num2){
+    return(num2)
+  } else {
+    return(num1)
+  }
+}
+
+compareNums(1,5);
+
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -69,8 +90,11 @@
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
-//CODE HERE
+function add(num1, num2) {
+  return (Number(num1) + Number(num2))
+}
 
+let sum = add("9", 7)
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -85,7 +109,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-// expression
+expression = "I had to set these equal to something so my code would still run"
 
 
 
@@ -100,7 +124,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+ arrow = 0
 // declaration
 // expression
 
@@ -111,7 +135,7 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = str => {return str.toUpperCase() + "!!!"}
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -125,7 +149,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+declaration = 0
 // expression
 
 
@@ -138,8 +162,16 @@ function exclaimFour(str) {
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
-
+function nameCheck(name) {
+  if (name === "Steven"){
+    console.log("What is up, Steven?");
+  } else if (name === "Bryan"){
+    console.log("Hey Bryan!");
+  } else {
+    console.log(`Cool name, ${name}`)
+  }
+}
+let nameGreeting = nameCheck("Calvin");
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -151,7 +183,19 @@ function exclaimFour(str) {
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+function faveColorFinder(color) {
+  if (color === "red") {
+    return("red is a great color")
+  } else if (color === "green") {
+    return("green is a solid favorite color");
+  }else if (color === "black") {
+    return("so trendy")
+  }else {
+    return("you need to evaluate your favorite color choice.")
+  }
+}
+let colorRating = faveColorFinder("blue")
+
 
 
 ////////////////// PROBLEM 12 ////////////////////
